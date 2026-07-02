@@ -8,7 +8,7 @@ from src.persistence.account_repo import AccountRepository
 
 class BankService:
     def __init__(self, repository: AccountRepository):
-        self.repository = repository 
+        self.repository = repository
 
     def register_account(
         self,
@@ -31,7 +31,7 @@ class BankService:
 
         balance = self.repository.get_balance(account_id)
 
-        return balance if balance is not None else 0.0, False   
+        return balance if balance is not None else 0.0, False
 
     def check_balance(self, account_id: int) -> tuple[float | None, bool]:
         """
