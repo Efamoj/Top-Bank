@@ -28,4 +28,4 @@ make run
 ```
 
 ## Author
-- **João Marcos:** [jomasii](https://github.com/jomasii)
+- **Joao Marcos:** [jomasii](https://github.com/jomasii)
