@@ -48,7 +48,7 @@ class BankService:
         Make the deposit and refund the amount.
         """
         if amount <= 0:
-            return None, "Valor deve ser maior que zero"
+            return None, "Valor deve ser positivo"
 
         if not self.repository.account_exists(account_id):
             return None, "Conta inexistente"
