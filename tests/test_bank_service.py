@@ -131,7 +131,7 @@ class TestMakeDeposit:
     def test_credito_valor_negativo(self, service, mock_repo):
         balance, msg = service.make_deposit(1, -50.0)
         assert balance is None
-        assert msg == "Valor deve ser maior que zero"
+        assert msg == "Valor deve ser positivo"
 
     def test_credito_valor_zero(self, service, mock_repo):
         balance, msg = service.make_deposit(1, 0.0)
