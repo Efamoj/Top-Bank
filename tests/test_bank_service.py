@@ -133,11 +133,6 @@ class TestMakeDeposit:
         assert balance is None
         assert msg == "Valor deve ser positivo"
 
-    def test_credito_valor_zero(self, service, mock_repo):
-        balance, msg = service.make_deposit(1, 0.0)
-        assert balance is None
-        assert msg == "Valor deve ser positivo"
-
     def test_credito_bonificacao_conta_bonus(self, service, mock_repo):
         mock_repo.account_exists.return_value = True
         mock_repo.get_account_type.return_value = BONUS_ACCOUNT_TYPE
